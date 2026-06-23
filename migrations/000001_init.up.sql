@@ -1,0 +1,2 @@
+-- 000001_init.up.sql
+-- Add your initial schema here.

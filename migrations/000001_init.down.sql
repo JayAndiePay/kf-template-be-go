@@ -1,0 +1,2 @@
+-- 000001_init.down.sql
+-- Rollback for 000001_init.
