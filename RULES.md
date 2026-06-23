@@ -111,10 +111,11 @@ Never apply manually — run via the deploy pipeline. CI checks up/down parity.
 
 ## 6. Definition of Done
 
-1. `go build ./...` passes.
-2. `go vet ./...` passes with 0 warnings.
-3. `go test -race ./...` passes (unit + integration).
-4. No magic strings — use constants.
-5. `docker build` succeeds.
-6. No sensitive data in logs or config files.
-7. Every new migration has a matching `.down.sql`.
+1. `gofmt -l .` returns empty (zero unformatted files).
+2. `go build ./...` passes.
+3. `go vet ./...` passes with 0 warnings.
+4. `go test -race ./...` passes (unit + integration) — **hard gate before Docker build**.
+5. No magic strings — use constants.
+6. `docker build` succeeds.
+7. No sensitive data in logs or config files.
+8. Every new migration has a matching `.down.sql`.
